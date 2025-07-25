@@ -4,7 +4,10 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.http.WebSocket.Listener;
+import java.util.Scanner;
 
 public class Main {
     private JFrame mainframe;
@@ -16,6 +19,7 @@ public class Main {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new Main().createAndShowGUI()); //GUI thread
+        Storage.loadFromFile();
     }
 
 
@@ -117,7 +121,6 @@ public class Main {
         return panel;
     }
 
-
     private JPanel createTrainVocabMenu() {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(Color.DARK_GRAY);
@@ -210,7 +213,6 @@ public class Main {
         return panel;
     }
 
-
     private JPanel createEnterVocabMenu() {
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
@@ -302,7 +304,7 @@ public class Main {
         saveButton.setPreferredSize(new Dimension(170, 35));
         saveButton.addActionListener(e -> {
             if (word1.getText().length() > 0 && word2.getText().length() > 0) {
-                if (!Storage.addWords(word1.getText(), word2.getText())) {
+                if (!Storage.addWords(word1.getText(), word2.getText(), false)) {
                     JOptionPane.showMessageDialog(mainframe,
                      "Wort ist bereits vorhanden", "Fehler", 0);
                 } else {
@@ -335,15 +337,6 @@ public class Main {
 
         return panel;
     }
-
-
-
-
-
-
-
-
-
 
 
 
