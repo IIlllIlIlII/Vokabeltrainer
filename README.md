@@ -1,4 +1,4 @@
-# Vokabeltrainer (Java Swing)
+# Vokabeltrainer v.1.1.0 (Java Swing)
 
 Ein einfacher Vokabeltrainer zur Verwaltung und Abfrage von Deutsch–Englisch-Vokabeln mit grafischer Benutzeroberfläche.
 
