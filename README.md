@@ -16,11 +16,12 @@ Dieses Java-Projekt wurde im Rahmen einer Übungsaufgabe entwickelt. Ziel war es
 - Rückmeldung zur Benutzerantwort (richtig/falsch)
 - Punktestand wird mitgezählt
 - Benutzeroberfläche mit Java Swing
-
-### Geplante Erweiterungen
-
 - Speicherung der Vokabeln in einer Datei
 - Laden der Vokabeln aus einer Datei beim Programmstart
+
+### Geplante Erweiterungen
+/
+
 
 ## Nutzung
 
